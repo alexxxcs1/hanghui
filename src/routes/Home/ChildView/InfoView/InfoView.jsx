@@ -14,7 +14,7 @@ export class InfoView extends Component {
     this.state = {
       name:'',
       id:'',
-      sex:0,
+      sex:null,
     };
     this.refreshProps = this.refreshProps.bind(this);
     this.HandleSex = this.HandleSex.bind(this);
@@ -45,12 +45,14 @@ export class InfoView extends Component {
     this.setState(this.state);
   }
   next(){
-    if(!this.state.name&&!this.state.id&&!this.state.sex){
-      alert('请输入完整的信息')
+    if(!this.state.name||!this.state.id||this.state.sex==null){
+      alert('请您填写完整的信息')
     }else{
       api.Login(this.state.name.slice(0, 5),this.state.id,(this.state.sex+1)).then(res=>{
         if (res.code == 200) {
           this.context.setStageStatus(3);
+        }else{
+          alert(res.msg)
         }
       })
       
