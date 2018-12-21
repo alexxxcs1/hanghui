@@ -34,7 +34,7 @@ export class IndexView extends Component {
     this.setState(this.state);
     longtouch = setTimeout(() => {
       this.longpress();
-    }, 1000);
+    }, 500);
   }
   touchmove() {
     this.state.onTouch = false;
