@@ -1,0 +1,186 @@
+.ViewBox {
+    width: 100%;
+    height: 100%;
+    max-height: 1334px;
+    position: relative;
+
+    .Detial {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        .LoadingLogo {
+            width: 452px;
+            height: 452px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .Logos {
+                width: 342px;
+                height: 284px;
+                position: relative;
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+
+                img:nth-child(1) {
+                    z-index: 0;
+                }
+
+                img:nth-child(2) {
+                    z-index: 1;
+                    mask: linear-gradient(90deg, #000, transparent);
+                    animation: maskanmi 2s infinite linear;
+                }
+            }
+
+            .RingBall {
+                position: absolute;
+                width: 452px;
+                height: 452px;
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+                img {
+                    width: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+
+                img:nth-child(1) {
+                    z-index: 1;
+                    animation: roundroate 3s infinite linear;
+                }
+
+                img:nth-child(2) {
+                    z-index: 0;
+                }
+
+                @keyframes roundroate {
+                    0% {
+                        transform: rotate(0deg)
+                    }
+
+                    100% {
+                        transform: rotate(360deg)
+                    }
+                }
+            }
+            
+
+            @keyframes maskanmi {
+                0% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 10%, transparent 20%, transparent 100%);
+                }
+
+                5% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 20%, transparent 30%, transparent 100%);
+                }
+
+                10% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 30%, transparent 40%, transparent 100%);
+                }
+
+                15% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 40%, transparent 50%, transparent 100%);
+                }
+
+                20% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 50%, transparent 60%, transparent 100%);
+                }
+
+                25% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 60%, transparent 70%, transparent 100%);
+                }
+
+                30% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 70%, transparent 80%, transparent 100%);
+                }
+
+                35% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 80%, transparent 90%, transparent 100%);
+                }
+
+                40% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 90%, transparent 100%);
+                }
+
+                45% {
+                    mask: linear-gradient(90deg, transparent 0%, transparent 100%);
+                }
+
+                50% {
+                    mask: linear-gradient(90deg, transparent 0%, transparent 100%);
+                }
+
+                55% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 90%, transparent 100%);
+                }
+
+                60% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 80%, transparent 90%, transparent 100%);
+                }
+
+                65% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 70%, transparent 80%, transparent 100%);
+                }
+
+                70% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 60%, transparent 70%, transparent 100%);
+                }
+
+                75% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 50%, transparent 60%, transparent 100%);
+                }
+
+                80% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 50%, transparent 60%, transparent 100%);
+                }
+
+                85% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 40%, transparent 50%, transparent 100%);
+                }
+
+                90% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 30%, transparent 40%, transparent 100%);
+                }
+
+                95% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 20%, transparent 30%, transparent 100%);
+                }
+
+                100% {
+                    mask: linear-gradient(90deg, transparent 0%, #000 10%, transparent 20%, transparent 100%);
+                }
+            }
+        }
+        .LoadingText{
+            font-size: 44px;
+            color: #f0e599;
+        }
+        .resultimg{
+            width: 100%;
+        }
+    }
+
+    .bkg {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

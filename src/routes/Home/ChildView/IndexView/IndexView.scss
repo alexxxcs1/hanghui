@@ -1,0 +1,71 @@
+.ViewBox {
+    width: 100%;
+    height: 100%;
+    max-height: 1334px;
+    position: relative;
+    user-select: none;
+    .Detial {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        .RowText{
+            font-size: 43.24px;
+            color: #fff;
+        }
+        .clickTips{
+            font-size: 40px;
+        }
+        .fingerprintBox {
+            margin: 120px 0px;
+            width: 323px;
+            height: 322px;
+            position: relative;
+            user-select: none;
+            background-size: 100% 100%;
+        }
+
+        .startscan {
+            &::after {
+                width: 100%;
+                height: 3px;
+                background: rgba($color: #fff, $alpha: 0.9);
+                position: absolute;
+                content: '';
+                top: 0px;
+                left: 0px;
+                box-shadow: rgba($color: #fff, $alpha: 0.6) 0 0 20px 3px;
+                animation: scan 0.5s linear;
+                animation-iteration-count: 3;
+            }
+
+            @keyframes scan {
+                0% {
+                    top: 0%;
+                }
+
+                50% {
+                    top: 100%;
+                }
+
+                100% {
+                    top: 0%;
+                }
+            }
+        }
+    }
+
+    .bkg {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        user-select: none;
+    }
+}

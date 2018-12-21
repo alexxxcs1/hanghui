@@ -1,0 +1,157 @@
+.ViewBox {
+    width: 100%;
+    height: 100%;
+    max-height: 1334px;
+    position: relative;
+    .Detial {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        .WarChart{
+            width: 507px;
+            // height: 397px;
+            margin-bottom: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .WarchartLine{
+                width: 540px;
+            }
+            .WarchartPic{
+                width: 100%;
+            }
+        }
+        .UserInfoBox{
+            width: 570px;
+
+            .InfoTop{
+                width: 100%;
+                height: 285px;
+                // background: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .InfoType{
+                    width: 379px;
+                    height: 100%;
+                    // background: #fff;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .RankInfo{
+                        width: 338px;
+                        height: 246px;
+                    }
+                }
+                .InputPic{
+                    width: calc(100% - 379px);
+                    height: 227px;
+                    background: rgba($color: #fff, $alpha: 0.5);
+                    border-radius: 10px;
+                    box-shadow: #06b4c1 0 0 0 1px inset;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 29px;
+                    color: #fff;
+                    font-weight: bold;
+                    overflow: hidden;
+                    .fileimg{
+                        width: 90%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .File{
+                        display: none;
+                    }
+                    .AddIcon{
+                        width: 40px;
+                        height: 40px;
+                        margin-bottom: 47px;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            background: #fff;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            background: #fff;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+                        }
+                    }
+                }
+            }
+
+            .InfoBot{
+                width: 100%;
+                
+                .MessageInput{
+                    width: 100%;
+                    height: 50px;
+                    background: rgba($color: #fff, $alpha: 0.3);
+                    border-radius: 10px;
+                    box-shadow: 0 0 0 1px #06b4c1;
+                    input{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background:transparent;
+                        outline: none;
+                        font-size: 25px;
+                        color: #fff;
+                        text-indent: 30px;
+                        &::placeholder{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .SubmitButton{
+                width: 300px;
+                height: 54px;
+                background: rgba($color: #06b4c1, $alpha: 0.8);
+                border-radius: 10px;
+                margin:  30px auto;
+                font-size: 30px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: rgba($color: #333, $alpha: 0.3) -3px -3px 0 5px inset,rgba($color: #fff, $alpha: 0.5) 3px 3px 0 5px inset;
+            }
+        }
+    }
+
+    .bkg {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

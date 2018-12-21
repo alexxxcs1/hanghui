@@ -1,0 +1,69 @@
+.ViewBox {
+    width: 100%;
+    height: 100%;
+    max-height: 1334px;
+    position: relative;
+    .Detial {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        .QuestionTittle{
+            width: 590px;
+            height: 260px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 33px;
+            
+            letter-spacing: 3px;
+            line-height: 63px;
+        }
+        .QuestionOptionBox{
+
+            .Option{
+                width: 440px;
+                min-height: 43px;
+                // background: #000;
+                margin-bottom: 70px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 36px;
+                .OptionIcon{
+                    width: 25px;
+                    height: 25px;
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                    border-radius: 5px;
+                    box-shadow: #fff 0 0 0 2px inset;
+                    margin:0 40px 0 0;
+                }
+                .ActOption{
+                    box-shadow: #fff 0 0 0 2px inset,#333 0 0 0 6px inset,#fff 0 0 0 25px inset;
+                }
+            }
+        }
+        .nextQuestion{
+            width: 178px;
+            height: 69px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .bkg {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

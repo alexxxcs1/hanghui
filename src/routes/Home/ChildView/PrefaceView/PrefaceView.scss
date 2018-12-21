@@ -1,0 +1,136 @@
+.ViewBox {
+    width: 100%;
+    height: 100%;
+    max-height: 1334px;
+    position: relative;
+    
+    .Detial {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: #fff;
+        z-index: 3;
+        .basetext{
+            animation: scaleIn 0.3s backwards;
+            animation-delay: calc(var(--anmdelay) * 0.2s);
+        }
+        & div:nth-child(1) {
+            --anmdelay:1;
+            font-size: 31px;
+            margin-bottom: 68px;
+        }
+        & div:nth-child(2) {
+            --anmdelay:2;
+            font-size: 44px;
+            margin-bottom: 79px;
+        }
+        & div:nth-child(3) {
+            --anmdelay:3;
+            font-size: 38px;
+            margin-bottom: 54px;
+        }
+        & div:nth-child(4) {
+            --anmdelay:4;
+            font-size: 59px;
+            font-weight: bold;
+            margin-bottom: 65px;
+        }
+        & div:nth-child(5) {
+            --anmdelay:5;
+            font-size: 44px;
+            margin-bottom: 97px;
+
+            span{
+                font-size: 52px;
+            }
+        }
+        @keyframes scaleIn {
+            0%{
+                opacity: 0;
+                transform: scale(10);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+        .ClikcTips{
+            margin-left: calc(100% - 149px - 92px);
+            width: 149px;
+            animation: click 1s 1.8s infinite;
+            opacity: 0;
+            margin-bottom: 120px;
+        }
+        @keyframes click {
+            0%{
+                opacity: 0.5;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0.5;
+            }
+        }
+    }
+    .people{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        z-index: 2;
+        opacity: 0.5;
+        animation: fadeInShadow 1s 1s backwards ;
+    }
+    @keyframes fadeInShadow {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0.5;
+        }
+    }
+
+    .light{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1.5);
+        transform-origin:  440px 520px;
+        animation: fadeInLight 1s 1.5s backwards ;
+    }
+    @keyframes fadeInLight {
+        0%{
+            opacity: 0;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    }
+    .bkg {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
