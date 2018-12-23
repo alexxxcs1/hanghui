@@ -95,8 +95,8 @@ export class Home extends Component {
     var share_img =
       "http://h5.rup-china.com/hanhui/public/html/static/media/" +
       shareicon.split("/")[3];
-    var share_title = "2019瀚晖肿瘤药物事业部年会";
-    var share_content = "你心中的超级英雄";
+    var share_title = "想了解你心中的神秘力量吗";
+    var share_content = "2019瀚晖肿瘤药物事业部年会";
     api.getShare(window.location.href).then(
       response => {
         window.wx.config({
